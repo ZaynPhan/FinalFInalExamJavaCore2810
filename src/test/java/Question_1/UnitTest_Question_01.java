@@ -4,9 +4,11 @@ import Question_1.utils.Student;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.util.List;
-import static Question_1.ClassX.*;
+
+import static Question_1.ClassX.readData;
 
 
 public class UnitTest_Question_01 {
@@ -27,6 +29,4 @@ public class UnitTest_Question_01 {
         int size = listTopTenTheoryPoint.size();
         Assertions.assertEquals(10, size);
     }
-
-    
 }

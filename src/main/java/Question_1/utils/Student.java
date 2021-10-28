@@ -24,6 +24,17 @@ public class Student {
         this.finalPoint = finalPoint;
     }
 
+    public static double roundPoint(double value, int position) {
+        if (position < 0) {
+            throw new IllegalArgumentException();
+        }
+
+        long factor = (long) Math.pow(10, position);
+        value = value * factor;
+        long temporary = Math.round(value);
+        return (double) temporary / factor;
+    }
+
     public int getID() {
         return ID;
     }
@@ -101,16 +112,5 @@ public class Student {
                 ", theory=" + theory +
                 ", finalPoint=" + getFinalPoint() +
                 '}';
-    }
-
-    public static double roundPoint(double value, int position) {
-        if (position < 0) {
-            throw new IllegalArgumentException();
-        }
-
-        long factor = (long) Math.pow(10, position);
-        value = value * factor;
-        long temporary = Math.round(value);
-        return (double) temporary / factor;
     }
 }
